@@ -10,7 +10,7 @@ class PostForm extends Component {
       id: new Date(),
       title,
       message,
-      editing:false
+      editing: false
     };
     this.props.dispatch({
       type: "ADD_POST",
@@ -23,9 +23,9 @@ class PostForm extends Component {
 
   render() {
     return (
-      <div>
-        <h1>Create Post</h1>
-        <form onSubmit={this.handleSubmit}>
+      <div className="post-container">
+        <h1 className="post_heading">Create Post</h1>
+        <form className="form" onSubmit={this.handleSubmit}>
           <input
             required
             type="text"
@@ -37,8 +37,8 @@ class PostForm extends Component {
           <textarea
             required
             rows="5"
-            cols="28"
             ref={input => (this.getMessage = input)}
+            cols="28"
             placeholder="Enter Post"
           />
           <br />
